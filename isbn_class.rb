@@ -73,5 +73,3 @@ def is_valid_ISBN?(num)
 		when nil then false
 	end
 end
-
-print is_valid_ISBN?("877195869x")

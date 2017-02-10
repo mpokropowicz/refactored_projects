@@ -27,4 +27,15 @@ class TestISBN < Minitest::Test
 		assert_equal(true, isbn.valid_checksum13?)
 	end
 
+	def test_valid_ISBNS
+
+		assert_equal(true, is_valid_ISBN?("877195869x"))
+		assert_equal(true, is_valid_ISBN?("0471958697"))
+		assert_equal(true, is_valid_ISBN?("9780470059029"))
+
+		# assert_equal(false, is_valid_ISBN?("877195869x"))
+		# assert_equal(false, is_valid_ISBN?("0471958697"))
+		# assert_equal(false, is_valid_ISBN?("9780470059029"))
+	end
+
 end
