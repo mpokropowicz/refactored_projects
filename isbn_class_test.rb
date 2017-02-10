@@ -33,9 +33,9 @@ class TestISBN < Minitest::Test
 		assert_equal(true, is_valid_ISBN?("0471958697"))
 		assert_equal(true, is_valid_ISBN?("9780470059029"))
 
-		# assert_equal(false, is_valid_ISBN?("877195869x"))
-		# assert_equal(false, is_valid_ISBN?("0471958697"))
-		# assert_equal(false, is_valid_ISBN?("9780470059029"))
+		assert_equal(false, is_valid_ISBN?("877195864x"))
+		assert_equal(false, is_valid_ISBN?("0471a958af$697"))
+		assert_equal(false, is_valid_ISBN?("978047xx59sad029"))
 	end
 
 end
