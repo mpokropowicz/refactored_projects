@@ -7,7 +7,6 @@ class ISBN
 
 		@isbn = isbn.delete(" -")
 		@type = nil
-
 	end
 
 	def valid_checksum10?
@@ -18,7 +17,6 @@ class ISBN
 		isbn.each_char.with_index {|number, index| sum += number.to_i * (index + 1)}
 
 		(sum % 11) == checksum
-
 	end
 
 	def valid_checksum13?
@@ -76,4 +74,4 @@ def is_valid_ISBN?(num)
 	end
 end
 
-print is_valid_ISBN?("9780470059029")
+print is_valid_ISBN?("877195869x")
