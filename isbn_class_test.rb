@@ -14,4 +14,17 @@ class TestISBN < Minitest::Test
 		isbn.set_isbn("9780470059029")
 		assert_equal("13", isbn.get_type)
 	end
+
+	def test_valid_checksums
+
+		isbn = ISBN.new("877195869x")
+		assert_equal(true, isbn.valid_checksum10?)
+
+		isbn.set_isbn("0471958697")
+		assert_equal(true, isbn.valid_checksum10?)
+
+		isbn.set_isbn("9780470059029")
+		assert_equal(true, isbn.valid_checksum13?)
+	end
+
 end
